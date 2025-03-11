@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Header Bar</title>
+    <link rel="stylesheet" href="/style.css">
+    <script defer src="/script.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">Bibek</div>
+        <div class="nav-links">
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="me">I am Bibek, a Software Engineer</div>
+        <br>
+        <p><a href="#contact">Talk To Me</a></p>
+    </div>
+
+    <div id="about" class="about">
+        <h1>About Me</h1>
+        <p>
+            Bibek is a third-year software engineering student at Jain University with strong expertise in full-stack development.
+            He has hands-on experience in both front-end and back-end technologies, Agile methodologies, and software testing.
+            His goal is to become a proficient software engineer and trader, combining technical expertise with analytical thinking to excel in both fields.
+        </p>
+    </div>
+
+    <div class="color">My Projects</div>
+    <div id="projects" class="projects-grid">
+        <div class="project">
+            <img src="/images/html.webp" alt="HTML Project">
+            <p>HTML Project</p>
+            <a href="/project.html">View Project</a>
+        </div>
+        <div class="project">
+            <img src="/images/css.png" alt="CSS Project">
+            <p>CSS Project</p>
+            <a href="/project.html">View Project</a>
+        </div>
+    </div>
+
+    <div id="contact" class="contact-section">
+        <h1 style="background-color: bisque;
+        text-align: center;
+        padding: 20px;
+        font-size: 50px;">Contact Me</h1>
+        <form name="contactForm" class="contact-form" onsubmit="return validateForm()">
+            <input type="text" name="name" placeholder="Your Name">
+            <input type="email" name="email" placeholder="Your Email">
+            <input type="text" name="subject" placeholder="Subject">
+            <textarea name="message" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <div class="resume-download">
+        <a href="resume.pdf" download="Bibek_Resume.pdf" class="resume-btn">Download Resume</a>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Bibek. All rights reserved.</p>
+    </div>
+</body>
+</html>

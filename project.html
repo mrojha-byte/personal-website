@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="/style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+        <div class="navbar">
+            <div class="logo">Bibek</div>
+            <div class="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="/index.html">About</a>
+                <a href="/index.html">Contact</a>
+            </div>
+        </div>
+    
+    <section id="html-projects" class="projects-section" style="margin-top: 200px;">
+        <h2>HTML Projects</h2>
+        <div class="projects-container"></div>
+    </section>
+    
+    <section id="css-projects" class="projects-section">
+        <h2>CSS Projects</h2>
+        <div class="projects-container"></div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Bibek. All Rights Reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const projects = [
+                { category: "html-projects", title: "Portfolio Website", img:  "/images/html.webp"},
+                { category: "css-projects", title: "Animated Cards", img: "/images/css.png" }
+            ];
+            
+            projects.forEach(project => {
+                let container = document.querySelector(`#${project.category} .projects-container`);
+                let projectElement = document.createElement("div");
+                projectElement.classList.add("project-card");
+                projectElement.innerHTML = `
+                    <img src="${project.img}" alt="${project.title}">
+                    <h3>${project.title}</h3>
+                    <button>View Project</button>
+                `;
+                container.appendChild(projectElement);
+            });
+        });
+    </script>
+</body>
+</html>

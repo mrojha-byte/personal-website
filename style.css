@@ -1,0 +1,171 @@
+/* Import Modern Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    background: #121212;
+    color: #ffffff;
+}
+
+/* Glassmorphism Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ffcc;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #00ffcc;
+}
+
+/* Hero Section */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    text-align: center;
+    background: url('/images/home-dark.jpg') no-repeat center center/cover;
+}
+
+.content .me {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.content a {
+    transition: 0.3s;
+    color: black;
+    background-color: #00ffcc;
+    padding: 15px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.content a:hover {
+    background-color: #ffffff;
+    color: black;
+}
+
+/* About Section */
+.about {
+    padding: 60px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin: 50px auto;
+    width: 80%;
+}
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.project img:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 80%;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background: #333;
+    color: white;
+}
+
+.contact-form button {
+    background: #00ffcc;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.contact-form button:hover {
+    background: #ffffff;
+    color: black;
+}
+
+/* Footer */
+.footer {
+    background: #000;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .content {
+        height: auto;
+        padding: 30px;
+    }
+}
